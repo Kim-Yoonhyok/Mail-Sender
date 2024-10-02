@@ -1,0 +1,10 @@
+Hi {recruiter},
+
+I hope you're having a great week so far! Recognizing your likely busy schedule, I'll keep this brief.
+
+I am currently pursuing Management Engineering at the University of Waterloo. My aspiration is to become a Software Developer and I believe {company} would be an amazing place for me to learn and grow as a developer. I’ve completed previous full stack internships and I have a keen interest in interning at your company for my upcoming Fall 2024 Co-op.
+
+I hope to talk to you soon and thank you for your time and consideration!
+
+Sincerely,
+Yoon Kim
