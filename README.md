@@ -11,11 +11,17 @@ This script automates the process of sending personalized emails to a list of re
 
 ### Installation
 1. Clone the repository:
+
+```sh
 git clone <repository-url>
 cd <repository-directory>
+```
 
 2. Install the required libraries:
+
+```sh
 pip install pandas pywin32
+```
 
 3. Ensure the Excel file and the resume are in the same directory as the script
 
@@ -25,6 +31,8 @@ pip install pandas pywin32
 - Make sure to change the message file to whatever message you want to send
 
 2. Run the script:
-python main.py
 
+```sh
+python main.py
+```
 
