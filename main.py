@@ -38,31 +38,27 @@ def send_email(companies, recruiters, emails):
         subject = "Fall 2024 Internship"
         body = f"""Hi {recruiters[i]}, 
 
-        I hope you're having a great week so far! Recognizing your likely busy schedule, I'll keep this brief. 
+I hope you're having a great week so far! Recognizing your likely busy schedule, I'll keep this brief. 
 
-        I'm currently looking for a fall 2024 internship in operations, business, or any other relevant field at {companies[i]}.
-        I realize it's late in the term, but unfortunately, my internship planned for this fall fell through. I would love the
-        opportunity to discuss any openings you may have. Looking forward to hearing from you soon! 
+I'm currently looking for a fall 2024 internship in operations, business, or any other relevant field at {companies[i]}.
+I realize it's late in the term, but unfortunately, my internship planned for this fall fell through. I would love the
+opportunity to discuss any openings you may have. Looking forward to hearing from you soon! 
 
-        Sincerely, 
-        Jasmine Tey"""
+Sincerely, 
+Jasmine Tey"""
 
+    mail.Subject = subject
+    mail.Body = body
+    mail.To = emails[i]
 
-        mail.SentOnBehalfOfName = 'jtey@uwaterloo.ca'
-        mail.Subject = subject
-        mail.Body = body
-        mail.To = emails[i]
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    resume_path = os.path.join(script_dir, 'Resume.pdf')
+    mail.Attachments.Add(resume_path)
 
-        script_dir = os.path.dirname(os.path.abspath(__file__))
-        resume_path = os.path.join(script_dir, 'Yoon_s_Resume.pdf')
-        mail.Attachments.Add(resume_path)
-
-        # Send the email
-        mail.Send()
+    # Send the email
+    mail.Send()
     print("Email sent!")
 
-
-read_excel_file('Book1.xlsx')
-
-
+excel_file = 'Book1.xlsx'
+read_excel_file(excel_file)
 send_email(companies, recruiters, emails)
